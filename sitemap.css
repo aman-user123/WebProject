@@ -1,0 +1,149 @@
+/* Background and Layout */
+.sitemap-body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('thumbnails/backdrop.avif');
+  background-size: cover;
+  color: red;
+  margin-right: 10px;
+}
+
+.sitemap-wrapper {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* dark overlay for contrast */
+  min-height: 100vh;
+}
+
+.sitemap-container {
+  background: url('thumbnails/image2.jpg');
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+/* SVG Elements */
+.node {
+  fill: #e0f2f1;
+  stroke: #00695c;
+  stroke-width: 2;
+  rx: 12;
+  transition: all 0.3s ease;
+}
+
+.node:hover {
+  fill: #80cbc4;
+  stroke: #004d40;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.current {
+  fill: #b2dfdb;
+  stroke: #00796b;
+}
+
+svg text {
+  fill: #212121;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.link {
+  stroke: #888;
+  stroke-width: 2;
+  stroke-dasharray: 4, 2;
+  opacity: 0.6;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #00332f;
+  /* dark greenish background */
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.page-editor-link {
+  color: #4dd0e1;
+  /* turquoise */
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-us {
+  color: #ffc107;
+  /* amber/yellow */
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.navigate a {
+
+  color: rgb(173, 27, 24);
+  padding: 10px 20px;
+  display: block;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.navigate a:hover {
+  background-color: var(--nav-hover-bg);
+  backdrop-filter: blur(10px);
+  color: #b3b3b3;
+  transition: 0.8s;
+}
+
+.navigate a.active {
+  text-decoration: underline;
+  background-color: rgba(53, 53, 53, 0.322);
+  color: #fff;
+  backdrop-filter: blur(10px);
+
+}
+
+#navbar {
+  transition: background-color 0.5s ease;
+  background-color: transparent;
+}
+
+#navbar.scrolled {
+  background-color: rgba(30, 30, 30, 0.689);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+.social-icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  svg text {
+    font-size: 12px;
+  }
+}
